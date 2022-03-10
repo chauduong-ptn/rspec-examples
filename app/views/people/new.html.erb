@@ -1,0 +1,9 @@
+<%= form_with(model: @person) do |f|%>
+  <% all_errors_of(@person).each do |error| %>
+    <%= error %>
+  <% end %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit 'Create' %>
+<% end %>
